@@ -1,0 +1,47 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Local DEM processing environment
+.venv-dem/
+__pycache__/
+*.csv.partial
+
+node_modules/
+dist/
+.env
+.env.local
+*.tif
+*.tiff
+*.csv
+
+# Only the small, exact EVAPlanner inputs belong in the deployment.
+!public/data/mars/crater_altitudes_slopes_10km.csv
+!public/data/mars/crater_tes_dust_scored_10km.csv
+!public/data/mars/crater_themis_dayir_10km.csv
+!public/data/mars/crater_themis_nightir_10km.csv
+!public/data/mars/crater_dem_10km_local.tif
+.env.*
+!.env.example
+.venv/

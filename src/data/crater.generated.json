@@ -1,0 +1,27 @@
+{
+  "bounds_m": [
+    -5000.0,
+    -5000.0,
+    5000.0,
+    5000.0
+  ],
+  "center": {
+    "latitude_N": 40.8563,
+    "longitude_E": 22.03879
+  },
+  "crs_wkt": "PROJCS[\"unknown\",GEOGCS[\"unknown\",DATUM[\"unknown\",SPHEROID[\"unknown\",3396190,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Azimuthal_Equidistant\"],PARAMETER[\"latitude_of_center\",40.8563],PARAMETER[\"longitude_of_center\",22.03879],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+  "hillshade": {
+    "url": "data/mars/crater_hillshade.png",
+    "width": 417,
+    "height": 417,
+    "azimuth_deg": 315,
+    "altitude_deg": 45,
+    "vertical_exaggeration": 1,
+    "method": "Lambertian illumination from DEM finite-difference normals; no cast-shadow simulation"
+  },
+  "source_hashes": {
+    "crater_ctx_10km_local.tif": "1939cf50d04e6a7b09659da7e48d511a28eabe6cc042f4ea3604fe8397d7a427",
+    "crater_dem_10km_local.tif": "9361d0b760369bcd7518cf0008c4088ff1b70734541ebff195b6dfbbd7219d30",
+    "crater_altitudes_slopes_10km.csv": "b2942aa18d223ffe4ae210f6a52e2eed1d2f0050099f5d77af80261e2d90421a"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "description": "Read-only original cropped inputs for the 10 km Mars study site. Review hashes explicitly when datasets intentionally change.",
+  "files": {
+    "crater_altitudes_slopes_10km.csv": {
+      "bytes": 14486054,
+      "sha256": "b2942aa18d223ffe4ae210f6a52e2eed1d2f0050099f5d77af80261e2d90421a"
+    },
+    "crater_tes_dust_scored_10km.csv": {
+      "bytes": 11354108,
+      "sha256": "f8f0475758c5c6c8bea8872e18365df69e1034aae358fc11b7f5b6f72b3aaca9"
+    },
+    "crater_themis_dayir_10km.csv": {
+      "bytes": 9242391,
+      "sha256": "b61ba96cf4a22b90e1af7c3c7c5482851d41bfba93ca7adc03f2ca7b32f1fd82"
+    },
+    "crater_themis_nightir_10km.csv": {
+      "bytes": 9243311,
+      "sha256": "d1c5234cb8776fab534aa1617a3d16f116034bf9561e4744df277efd716a27f7"
+    },
+    "crater_dem_10km_local.tif": {
+      "bytes": 346090,
+      "sha256": "9361d0b760369bcd7518cf0008c4088ff1b70734541ebff195b6dfbbd7219d30"
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "source": "data/mars/crater_tes_dust_scored_10km.csv",
+  "sha256": "f8f0475758c5c6c8bea8872e18365df69e1034aae358fc11b7f5b6f72b3aaca9",
+  "imageSha256": "187d6879746bb50dd58a896dcc76b21c97f92f7a0364c60cb851f42af0d204ea",
+  "url": "data/mars/crater_dust_scored.png?v=187d6879746bb50d",
+  "width": 417,
+  "height": 417,
+  "classes": [
+    {
+      "rgb": [
+        42,
+        222,
+        255
+      ],
+      "score": 0,
+      "cells": 99215
+    },
+    {
+      "rgb": [
+        42,
+        228,
+        254
+      ],
+      "score": 0.06666666666666667,
+      "cells": 48030
+    },
+    {
+      "rgb": [
+        43,
+        235,
+        253
+      ],
+      "score": 0.13333333333333333,
+      "cells": 8682
+    },
+    {
+      "rgb": [
+        43,
+        241,
+        253
+      ],
+      "score": 0.2,
+      "cells": 17962
+    }
+  ],
+  "minimum": 0,
+  "maximum": 0.2,
+  "cells": 173889,
+  "scale": [
+    0,
+    1
+  ],
+  "palette": [
+    {
+      "score": 0,
+      "rgb": [
+        42,
+        222,
+        255
+      ]
+    },
+    {
+      "score": 0.3333333333333333,
+      "rgb": [
+        44,
+        254,
+        251
+      ]
+    },
+    {
+      "score": 0.6666666666666666,
+      "rgb": [
+        28,
+        247,
+        205
+      ]
+    },
+    {
+      "score": 1,
+      "rgb": [
+        39,
+        212,
+        20
+      ]
+    }
+  ],
+  "interpretation": "Couleurs calculees depuis dust_score sur une echelle visuelle fixe 0–1. Scores inchanges, sans renormalisation. Indice experimental non calibre, pas un niveau de danger."
+}

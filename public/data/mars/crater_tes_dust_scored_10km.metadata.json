@@ -1,0 +1,55 @@
+{
+  "source": "crater_tes_dust_10km.csv",
+  "output": "crater_tes_dust_scored_10km.csv",
+  "rows": 173889,
+  "source_sha256": "ae66e0dfc86bd835b48410abe6a595776c88531554e932ac036f00ba574793ec",
+  "dem_csv_sha256": "b2942aa18d223ffe4ae210f6a52e2eed1d2f0050099f5d77af80261e2d90421a",
+  "output_sha256": "8813528b7968ff46b66e623363b421da0b2a84b5657612b240d0bc1bc993bbb9",
+  "added_column": "dust_score",
+  "classification": "EXPERIMENTAL_UNCALIBRATED_RGB_ORDINAL_RANK",
+  "direction": "blue-cyan to green",
+  "inverted": false,
+  "formula": "rank/3",
+  "warning": "Visual hue order only; dust meaning and direction unverified. Equal rank spacing is conventional. 0 is not no dust; 1 is not maximum hazard. Not a calibrated scientific measurement or validated route cost.",
+  "precision": "Finite decimal approximations of 1/3 and 2/3; no physical precision implied.",
+  "mapping": [
+    {
+      "rgb": [
+        42,
+        222,
+        255
+      ],
+      "dust_score": "0",
+      "cells": 99215
+    },
+    {
+      "rgb": [
+        44,
+        254,
+        251
+      ],
+      "dust_score": "0.3333333333333333",
+      "cells": 48030
+    },
+    {
+      "rgb": [
+        28,
+        247,
+        205
+      ],
+      "dust_score": "0.6666666666666666",
+      "cells": 8682
+    },
+    {
+      "rgb": [
+        39,
+        212,
+        20
+      ],
+      "dust_score": "1",
+      "cells": 17962
+    }
+  ],
+  "verification": "All original fields preserved verbatim; every row/col/x/y exactly matches the DEM CSV; 173889 cells; source hashes unchanged.",
+  "spatial_limit": "Repeated coarse source colors do not provide 24 m scientific resolution. Source latitude convention remains subject to the TES extraction provenance caveat."
+}

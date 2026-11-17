@@ -1,0 +1,14 @@
+import * as THREE from 'three'
+import type {TerrainGrid,WalkState} from './coordinates.ts'
+import {sampleTerrain,sampleTriangle,localToWorld} from './coordinates.ts'
+import type {Direction} from './povMotion.ts'
+import {directionVector} from './povMotion.ts'
+/** Ground-conforming interface meshes. No terrain geometry is invented. */
+export function createGroundArrows(grid:TerrainGrid,origin:number){
+ const group=new THREE.Group(),directions:Direction[]=['forward','backward','left','right']
+ const shape=[[-.48,-.35],[.48,-.35],[.48,.1],[.85,.1],[0,1.05],[-.85,.1],[-.48,.1]]
+ const meshes=directions.map(direction=>{const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(new Float32Array(shape.length*3),3));g.setIndex([0,1,2,0,2,6,6,2,3,6,3,4,6,4,5]);const m=new THREE.MeshBasicMaterial({color:0xf3b76e,transparent:true,opacity:.45,depthWrite:false,side:THREE.DoubleSide,polygonOffset:true,polygonOffsetFactor:-2});const mesh=new THREE.Mesh(g,m);mesh.userData.direction=direction;mesh.frustumCulled=false;const outlineGeometry=new THREE.BufferGeometry();outlineGeometry.setAttribute('position',g.getAttribute('position'));outlineGeometry.setIndex(shape.flatMap((_,i)=>[i,(i+1)%shape.length]));const outline=new THREE.LineSegments(outlineGeometry,new THREE.LineBasicMaterial({color:0xffe3af,transparent:true,opacity:.75,depthWrite:false}));outline.userData.interfaceOnly=true;mesh.add(outline);group.add(mesh);return mesh})
+ let hovered:THREE.Mesh|undefined
+ return{group,meshes,update(walk:WalkState,visible:boolean){group.visible=visible;if(!visible)return;const f=directionVector(walk.heading,'forward'),r=directionVector(walk.heading,'right');meshes.forEach((mesh,i)=>{const placement=[[0,8],[0,4.8],[-1.2,6.5],[1.2,6.5]][i];const cx=walk.x+r.x*placement[0]+f.x*placement[1],cy=walk.y+r.y*placement[0]+f.y*placement[1],dir=directionVector(walk.heading,directions[i]),right={x:dir.y,y:-dir.x};const a=mesh.geometry.attributes.position;let valid=true;shape.forEach(([sx,sy],j)=>{const x=cx+right.x*sx+dir.x*sy,y=cy+right.y*sx+dir.y*sy,h=sampleTerrain(grid,x,y),t=sampleTriangle(grid,x,y);if(h===null||t===null){valid=false;return}const p=localToWorld(x,y,Math.max(h,t)+.07,origin);a.setXYZ(j,p.x,p.y,p.z)});mesh.visible=valid;a.needsUpdate=true;mesh.geometry.computeBoundingSphere();(mesh.material as THREE.MeshBasicMaterial).opacity=mesh===hovered ? .82 : .32;const outline=mesh.children[0] as THREE.LineSegments;(outline.material as THREE.LineBasicMaterial).opacity=mesh===hovered ? 1 : .75})},pick(ray:THREE.Raycaster){const hit=ray.intersectObjects(meshes.filter(m=>m.visible),false)[0];return group.visible&&hit?hit.object as THREE.Mesh:undefined},hover(mesh:THREE.Mesh|undefined){hovered=mesh},dispose(){meshes.forEach(m=>{m.geometry.dispose();(m.material as THREE.Material).dispose();const outline=m.children[0] as THREE.LineSegments;outline.geometry.dispose();(outline.material as THREE.Material).dispose()})}}
+}
+

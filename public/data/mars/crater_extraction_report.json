@@ -1,0 +1,155 @@
+{
+  "center": {
+    "planetocentric_latitude_N": 40.8563,
+    "longitude_E": 22.03879,
+    "local_x_m": 0.0,
+    "local_y_m": 0.0
+  },
+  "local_crs_wkt": "PROJCS[\"unknown\",GEOGCS[\"unknown\",DATUM[\"unknown\",SPHEROID[\"unknown\",3396190,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Azimuthal_Equidistant\"],PARAMETER[\"latitude_of_center\",40.8563],PARAMETER[\"longitude_of_center\",22.03879],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+  "mars_sphere_radius_m": 3396190.0,
+  "bounds_m": [
+    -5000.0,
+    -5000.0,
+    5000.0,
+    5000.0
+  ],
+  "extent_m": [
+    10000,
+    10000
+  ],
+  "geographic_envelope_W_S_E_N": [
+    21.92712173482746,
+    40.77189336988076,
+    22.15045826517254,
+    40.94065302429057
+  ],
+  "method": "Bilinear reprojection; full output grids; float32 values; NoData-aware; no vertical datum transformation.",
+  "vertical_unit_assumption": "Source DEM has no vertical unit tag; elevations interpreted as meters per supplied DEM convention. No independent vertical datum validation.",
+  "resampling_effect": "Interpolation changes sample elevations and gradients. Nearest comparison measures interpolation sensitivity, not accuracy or elevation uncertainty.",
+  "projection_limit": "AEQD preserves radial distances from center on the source Mars sphere, not every distance or topographic surface length. Maximum tangential scale excess in this square is approximately c/sin(c)-1, c=sqrt(2)*5000/R.",
+  "max_tangential_scale_excess": 7.224952827122877e-07,
+  "rasters": {
+    "ctx": {
+      "source": "CTX_Ortho_40N022E_6mp_B18_016656_2206.tif",
+      "source_sha256": "149336caa85b790f141e33c6442cd54ab86552e1d01c18a412f33fb877892ba4",
+      "output": "crater_ctx_10km_local.tif",
+      "width": 1668,
+      "height": 1668,
+      "resolution_m": [
+        5.995203836930456,
+        5.995203836930456
+      ],
+      "bounds_m": [
+        -5000.0,
+        -5000.0,
+        5000.0,
+        5000.0
+      ],
+      "transform": [
+        5.995203836930456,
+        0.0,
+        -5000.0,
+        0.0,
+        -5.995203836930456,
+        5000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "valid_cells": 2782224,
+      "missing_cells": 0,
+      "valid_percent": 100.0,
+      "values": {
+        "min": -0.09765157103538513,
+        "max": 0.9527278542518616,
+        "mean": 0.29328298568725586
+      },
+      "source_vertical_unit_tag": null,
+      "source_scale": 1.0,
+      "source_offset": 0.0,
+      "first_pixel_center_m": [
+        -4997.002398081535,
+        4997.002398081535
+      ],
+      "last_pixel_center_m": [
+        4997.002398081535,
+        -4997.002398081535
+      ]
+    },
+    "dem": {
+      "source": "CTX_DEM_40N022E_24mp_B18_016656_2206_B18_016801_2206.tif",
+      "source_sha256": "2d31855f10362769b41ae015a33b9463d5b74e16e04e46268af412369b4ffab6",
+      "output": "crater_dem_10km_local.tif",
+      "width": 417,
+      "height": 417,
+      "resolution_m": [
+        23.980815347721823,
+        23.980815347721823
+      ],
+      "bounds_m": [
+        -5000.0,
+        -5000.0,
+        5000.0,
+        5000.0
+      ],
+      "transform": [
+        23.980815347721823,
+        0.0,
+        -5000.0,
+        0.0,
+        -23.980815347721823,
+        5000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "valid_cells": 173889,
+      "missing_cells": 0,
+      "valid_percent": 100.0,
+      "values": {
+        "min": -3669.41357421875,
+        "max": -3324.69140625,
+        "mean": -3619.353515625
+      },
+      "source_vertical_unit_tag": null,
+      "source_scale": 1.0,
+      "source_offset": 0.0,
+      "first_pixel_center_m": [
+        -4988.009592326139,
+        4988.009592326139
+      ],
+      "last_pixel_center_m": [
+        4988.00959232614,
+        -4988.00959232614
+      ],
+      "bilinear_vs_nearest_abs_difference_m": {
+        "min": 0.0,
+        "max": 4.576171875,
+        "mean": 0.19619733338778617,
+        "p50": 0.10498046875,
+        "p95": 0.659912109375
+      },
+      "bilinear_vs_nearest_abs_slope_difference_deg": {
+        "min": 9.956944149180913e-07,
+        "max": 6.027468047340271,
+        "mean": 0.27483558840998606,
+        "p95": 0.8639136442275595
+      }
+    }
+  },
+  "csv": {
+    "file": "crater_altitudes_slopes_10km.csv",
+    "rows": 173889,
+    "bytes": 14486054,
+    "altitudes_m": [
+      -3669.41357421875,
+      -3324.69140625
+    ],
+    "slopes_deg": [
+      0.002221174813852078,
+      31.549823321644077
+    ],
+    "validation": "Every row, coordinate, elevation and slope checked against the reprojected DEM."
+  },
+  "originals_and_src_unchanged": true
+}

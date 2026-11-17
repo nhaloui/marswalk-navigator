@@ -1,0 +1,158 @@
+{
+  "source_inspection": {
+    "file": "TES_Dust.tif",
+    "crs_wkt": "GEOGCS[\"GCS_Mars_2000\",DATUM[\"D_Mars_2000\",SPHEROID[\"Mars_2000_IAU_IAG\",3396190,169.894447223612,AUTHORITY[\"ESRI\",\"107905\"]],AUTHORITY[\"ESRI\",\"106905\"]],PRIMEM[\"Reference_Meridian\",0,AUTHORITY[\"ESRI\",\"108900\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"ESRI\",\"104905\"]]",
+    "dimensions": [
+      2880,
+      1440
+    ],
+    "resolution_degrees": [
+      0.125,
+      0.125
+    ],
+    "bounds": [
+      -180.0,
+      -90.0,
+      180.0,
+      90.0
+    ],
+    "transform": [
+      0.125,
+      0.0,
+      -180.0,
+      0.0,
+      -0.125,
+      90.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "bands": [
+      {
+        "band": 1,
+        "color": "red",
+        "dtype": "uint8",
+        "description": null,
+        "unit": null,
+        "scale": 1.0,
+        "offset": 0.0,
+        "nodata": null,
+        "valid_pixels": 4147200,
+        "min": 0.0,
+        "max": 255.0,
+        "unique_values": 125,
+        "metadata": {
+          "None": {}
+        }
+      },
+      {
+        "band": 2,
+        "color": "green",
+        "dtype": "uint8",
+        "description": null,
+        "unit": null,
+        "scale": 1.0,
+        "offset": 0.0,
+        "nodata": null,
+        "valid_pixels": 4147200,
+        "min": 0.0,
+        "max": 254.0,
+        "unique_values": 157,
+        "metadata": {
+          "None": {}
+        }
+      },
+      {
+        "band": 3,
+        "color": "blue",
+        "dtype": "uint8",
+        "description": null,
+        "unit": null,
+        "scale": 1.0,
+        "offset": 0.0,
+        "nodata": null,
+        "valid_pixels": 4147200,
+        "min": 0.0,
+        "max": 255.0,
+        "unique_values": 96,
+        "metadata": {
+          "None": {}
+        }
+      }
+    ],
+    "metadata": {
+      "None": {
+        "AREA_OR_POINT": "Area"
+      },
+      "IMAGE_STRUCTURE": {
+        "INTERLEAVE": "PIXEL"
+      },
+      "DERIVED_SUBDATASETS": {
+        "DERIVED_SUBDATASET_1_NAME": "DERIVED_SUBDATASET:LOGAMPLITUDE:TES_Dust.tif",
+        "DERIVED_SUBDATASET_1_DESC": "log10 of amplitude of input bands from TES_Dust.tif"
+      }
+    }
+  },
+  "source_latitude_interpretation": "declared_geodetic",
+  "registration_warning": "Source provenance/latitude convention is not documented. Default follows declared ellipsoidal geodetic CRS; verify against original product documentation before scientific use.",
+  "scientific_interpretation": "Three RGB uint8 display channels, no calibrated dust variable, units, legend, or scientific product identifier in metadata. Do not interpret RGB as dust abundance, opacity or route cost.",
+  "resampling": "Nearest source pixel center selected by inverse coordinate mapping of every target cell center. No averaging, interpolation, normalization or color-to-physics conversion.",
+  "output": "crater_tes_dust_10km_local.tif",
+  "csv": "crater_tes_dust_10km.csv",
+  "rows": 173889,
+  "dimensions": [
+    417,
+    417
+  ],
+  "bounds_m": [
+    -5000.0,
+    -5000.0,
+    5000.0,
+    5000.0
+  ],
+  "crs_wkt": "PROJCS[\"unknown\",GEOGCS[\"unknown\",DATUM[\"unknown\",SPHEROID[\"unknown\",3396190,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Azimuthal_Equidistant\"],PARAMETER[\"latitude_of_center\",40.8563],PARAMETER[\"longitude_of_center\",22.03879],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+  "resolution_m": [
+    23.980815347721823,
+    23.980815347721823
+  ],
+  "valid_pixels": 173889,
+  "missing_pixels": 0,
+  "distinct_source_pixels": 9,
+  "distinct_RGB_colors": 4,
+  "source_pixel_rows": [
+    389,
+    391
+  ],
+  "source_pixel_cols": [
+    1615,
+    1617
+  ],
+  "center": {
+    "longitude_E": 22.03879,
+    "latitude_planetocentric_N": 40.8563,
+    "source_latitude_geodetic_N": 41.1912850821362,
+    "source_row": 390,
+    "source_col": 1616,
+    "rgb": [
+      42,
+      222,
+      255
+    ]
+  },
+  "source_pixel_nominal_size_m": {
+    "north_south": 7409.337190413277,
+    "east_west_at_center": 5604.071640181906
+  },
+  "verification": "All 173889 CSV row/col/x/y entries exactly match altitude CSV; every band equals selected source pixel; output CRS/transform/bounds and masks verified.",
+  "routing_suitability": "Not usable directly as a physical/scientific dust cost. Obtain calibrated numerical TES data with product definition, units, validity mask, native resolution and latitude convention.",
+  "protected_source_hashes": {
+    "crater_ctx_10km_local.tif": "1939cf50d04e6a7b09659da7e48d511a28eabe6cc042f4ea3604fe8397d7a427",
+    "crater_dem_10km_local.tif": "9361d0b760369bcd7518cf0008c4088ff1b70734541ebff195b6dfbbd7219d30",
+    "CTX_DEM_40N022E_24mp_B18_016656_2206_B18_016801_2206.tif": "2d31855f10362769b41ae015a33b9463d5b74e16e04e46268af412369b4ffab6",
+    "CTX_Ortho_40N022E_6mp_B18_016656_2206.tif": "149336caa85b790f141e33c6442cd54ab86552e1d01c18a412f33fb877892ba4",
+    "TES_Dust.tif": "9b3e7c3e2bc450fa70f953c9700fb89f2e9e2ae0acc4bfce5934154e3e624e44",
+    "crater_altitudes_slopes_10km.csv": "b2942aa18d223ffe4ae210f6a52e2eed1d2f0050099f5d77af80261e2d90421a",
+    "mars_slopes.csv": "2b74c0901994ac189306411bfa62b4e1588339151a26500249c6c0ffe8458ed4"
+  },
+  "originals_unchanged": true
+}

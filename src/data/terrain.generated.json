@@ -1,0 +1,45 @@
+{
+  "width": 417,
+  "height": 417,
+  "bounds": [
+    -5000.0,
+    -5000.0,
+    5000.0,
+    5000.0
+  ],
+  "transform": [
+    23.980815347721823,
+    0.0,
+    -5000.0,
+    0.0,
+    -23.980815347721823,
+    5000.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "minimum": -3669.41357421875,
+  "maximum": -3324.69140625,
+  "units": "m (source convention; no vertical unit tag)",
+  "originElevation": -3632.463134765625,
+  "binary": "data/mars/crater_elevation.f32",
+  "dust": "data/mars/crater_tes_dust.png",
+  "elevationTexture": "data/mars/crater_elevation_color.png",
+  "nodata": "NaN",
+  "endianness": "little",
+  "crsWkt": "PROJCS[\"unknown\",GEOGCS[\"unknown\",DATUM[\"unknown\",SPHEROID[\"unknown\",3396190,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Azimuthal_Equidistant\"],PARAMETER[\"latitude_of_center\",40.8563],PARAMETER[\"longitude_of_center\",22.03879],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+  "sourceHashes": {
+    "crater_ctx_10km_local.tif": "1939cf50d04e6a7b09659da7e48d511a28eabe6cc042f4ea3604fe8397d7a427",
+    "crater_dem_10km_local.tif": "9361d0b760369bcd7518cf0008c4088ff1b70734541ebff195b6dfbbd7219d30",
+    "crater_tes_dust_10km_local.tif": "f46453dd3c23a7ed4b29cbbd046397f18b680461e857404157143acb0ca9f657",
+    "CTX_DEM_40N022E_24mp_B18_016656_2206_B18_016801_2206.tif": "2d31855f10362769b41ae015a33b9463d5b74e16e04e46268af412369b4ffab6",
+    "CTX_Ortho_40N022E_6mp_B18_016656_2206.tif": "149336caa85b790f141e33c6442cd54ab86552e1d01c18a412f33fb877892ba4",
+    "TES_Dust.tif": "9b3e7c3e2bc450fa70f953c9700fb89f2e9e2ae0acc4bfce5934154e3e624e44",
+    "crater_altitudes_slopes_10km.csv": "b2942aa18d223ffe4ae210f6a52e2eed1d2f0050099f5d77af80261e2d90421a",
+    "crater_tes_dust_10km.csv": "ae66e0dfc86bd835b48410abe6a595776c88531554e932ac036f00ba574793ec",
+    "crater_tes_dust_scored_10km.csv": "8813528b7968ff46b66e623363b421da0b2a84b5657612b240d0bc1bc993bbb9",
+    "mars_slopes.csv": "2b74c0901994ac189306411bfa62b4e1588339151a26500249c6c0ffe8458ed4"
+  },
+  "dustExperimental": true,
+  "dustRegistration": "Declared source CRS; source latitude convention needs provenance confirmation."
+}

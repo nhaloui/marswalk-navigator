@@ -1,0 +1,5 @@
+# Preserve scientific inputs byte-for-byte on Windows and Linux.
+# Their reviewed SHA-256 values must survive a Git clone on Render.
+public/data/mars/*.csv -text
+public/data/mars/*.tif -text
+public/data/mars/*.tiff -text

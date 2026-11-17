@@ -1,0 +1,9 @@
+{
+    "id":  "crater-10km-mars-local",
+    "region":  "Deuteronilus Mensae · Relief Deuteronius",
+    "sourceFile":  "public/data/mars/crater_ctx_10km_local.tif",
+    "previewUrl":  "data/mars/crater_ctx_10km.webp",
+    "attribution":  "NASA / MRO · CTX optical imagery",
+    "maxPreviewEdge":  1668,
+    "previewQuality":  95
+}
